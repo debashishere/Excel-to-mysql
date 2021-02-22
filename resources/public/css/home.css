@@ -42,11 +42,18 @@ body {
     display: block
 }
 
-.alert_container {
-    padding: 5px 0;
-    width: 100%;
-    text-align: center;
+#alert.danger {
     color: red;
+}
+
+#alert.success {
+    color: rgb(21, 83, 14);
+}
+
+.alert_container {
+    width: 100%;
+    height: 30px;
+    text-align: center;
     font-size: 0.95rem;
     font-weight: bold;
 }
