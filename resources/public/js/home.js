@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const baseUrl = `http://localhost:3000`
+    const baseUrl = `https://exceltotable.herokuapp.com`
 
 
     const table = $('#table').DataTable({
