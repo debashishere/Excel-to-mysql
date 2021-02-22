@@ -53,8 +53,13 @@ $(document).ready(function () {
     $("#upload_btn").on("click", async (event) => {
         try {
             event.preventDefault();
+
             let formData = new FormData();
             let file = $('#excel_file')[0].files[0];
+            if (!file) {
+                showAlert("Please select a file to upload.", "danger");
+                return;
+            }
             $('#excel_file').val('')
             formData.append("file", file)
             const url = baseUrl + '/api/excel/upload'
@@ -66,7 +71,7 @@ $(document).ready(function () {
             if (res.status == 200) {
                 console.log("file uploaded succefully");
                 // alert file upload successfull message.
-                showAlert("file upload successfull");
+                showAlert("file uploaded successfully.", "success");
                 $('.no_data').removeClass("active");
                 $('#table').parent().show()
 
@@ -76,14 +81,15 @@ $(document).ready(function () {
         }
 
         catch (err) {
-            console.log("error while uploading the file", err);
+            showAlert("Error! Please try again.", "danger");
         }
     });
 
 
     //************************FUNCTIONS******************************** */
-    const showAlert = (message) => {
+    const showAlert = (message, code) => {
         $('#alert').addClass("active");
+        $('#alert').addClass(`${code}`);
         $('#alert').html(`<p>${message}</p>`);
         setTimeout(function () {
             $('#alert').removeClass("active");
