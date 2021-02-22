@@ -50,12 +50,6 @@ $(document).ready(function () {
 
 
 
-
-
-
-
-
-
     $("#upload_btn").on("click", async (event) => {
         try {
             event.preventDefault();
