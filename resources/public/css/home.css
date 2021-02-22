@@ -1,0 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+}
+
+.no_data {
+    width: 95%;
+    height: 60px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 5px;
+    background-color: white;
+    transform: scale(0);
+}
+
+.no_data.active {
+    transform: scale(1);
+}
+
+.main_container {
+    width: 100%;
+    min-height: 89.9vh;
+    background-color: whitesmoke;
+    position: relative
+}
+
+
+#alert {
+    display: none;
+}
+
+#alert.active {
+    display: block
+}
+
+.alert_container {
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    color: red;
+    font-size: 0.95rem;
+    font-weight: bold;
+}
+
+.upload_file {
+    width: 100%;
+}
+
+.upload_file form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+}
+
+.upload_file form .input_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0 15px 0;
+    background-color: whitesmoke;
+}
+
+.upload_file form .input_container label {
+    font-size: 0.95rem;
+    color: black;
+}
+
+.upload_file form .input_container input {
+    font-size: 0.85rem;
+    color: gray;
+    margin-top: 15px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 70%;
+}
+
+.upload_file form .btn_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0 25px 0;
+}
+
+.upload_file form .btn_container button {
+    padding: 3.5px 16px;
+    font-size: 0.9rem;
+    letter-spacing: 0.015rem;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.upload_file form .btn_container button:first-child {
+    margin-right: 15px;
+    background-color: blueviolet;
+    color: white;
+}
+
+.upload_file form .btn_container button:first-child:hover {
+    background-color: rgb(37, 117, 5);
+}
+
+.upload_file form .btn_container button:last-child {
+    background-color: white;
+    border: 1px solid gray;
+}
+
+.upload_file form .btn_container button:last-child:hover {
+    background-color: rgb(197, 197, 197);
+}
+
+
+tr,
+td,
+th {
+    width: auto !important;
+    white-space: normal;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+table tfoot tr th input {
+    width: 100%;
+    height: 30px;
+    border: 1px solid gray;
+    outline: none;
+    border-radius: 5px;
+    margin: 7px 0;
+    background-color: white;
+    text-align: center;
+}
+
+table tfoot tr th input:focus {
+    border: 1px solid rgb(37, 117, 5);
+}
+
+.main_container .my_table_container {
+    width: 100%;
+    padding: 30px 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.dataTables_length {
+    padding-bottom: 25px;
+}
+
+.main_container .my_table_container table {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+
+.main_container .my_table_container table th,
+td {
+    border: 1px solid rgb(175, 175, 175);
+    text-align: center;
+    padding: 2px;
+}
+
+.main_container .my_table_container table th {
+    font-size: 0.94rem;
+}
+
+.main_container .my_table_container table td {
+    font-size: 0.9rem;
+    color: rgb(97, 96, 96);
+}
+
+.dataTables_info {
+    font-size: 0.9rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+}
+
+.dataTables_wrapper {
+    width: 100%;
+}
+
+.dataTables_paginate {
+    font-size: 0.9rem;
+    /* margin-bottom: 30px; */
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    padding: 2px 4px;
+}
+
+@media screen and (max-width: 331px) {
+    .main_container .my_table_container table th {
+        font-size: 0.8rem;
+    }
+
+    .main_container .my_table_container table td {
+        font-size: 0.7rem;
+    }
+
+    table tfoot tr th input {
+        font-size: 0.7rem;
+        margin: 7px 0;
+    }
+
+}
+
+@media screen and (min-width: 510px) {
+    .upload_file form .input_container input {
+        width: 350px;
+    }
+
+    .search_results .search_result_content .result_card {
+        width: 350px;
+    }
+
+    table tfoot tr th input {
+        width: 90%;
+        margin: 7px auto;
+    }
+
+    .dataTables_info {
+        font-size: 0.90rem;
+    }
+
+    .dataTables_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 620px) {
+    .upload_file form .input_container {
+        flex-direction: row;
+    }
+
+    .upload_file form .input_container input {
+        margin-top: 0;
+        width: 300px;
+    }
+
+    .upload_file form .input_container label {
+        margin-right: 10px;
+    }
+
+    .dataTables_wrapper {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .no_data {
+        width: 550px;
+    }
+
+    .dataTables_wrapper {
+        width: 750px;
+    }
+
+    .dataTables_info {
+        margin: 0;
+    }
+
+    .dataTables_paginate {
+        margin-bottom: 0;
+    }
+
+    .my_table_container {
+        padding-bottom: 30px;
+    }
+}

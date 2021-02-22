@@ -1,0 +1,43 @@
+<div class="main_container">
+    {{>header}}
+    <div class="alert_container">
+        <div id="alert">
+        </div>
+    </div>
+    <div class="upload_file">
+        <form enctype="multipart/form-data">
+            <div class="input_container">
+                <label for="file">Upload Excel File</label>
+                <input type="file" id="excel_file" name="file">
+            </div>
+            <div class="btn_container">
+                <button type="submit" id="upload_btn">Upload</button>
+                <button type="reset">Clear</button>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="my_table_container">
+        <table id="table" style="width:100%">
+            <thead>
+            </thead>
+            <tfoot style="display: table-header-group">
+                <tr>
+                    <th></th>
+                    <th>Name</th>
+                    <th>Roll No</th>
+                    <th></th>
+                </tr>
+            </tfoot>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+
+    <div class="no_data">
+        <p>Please Upload File To View as Table</p>
+    </div>
+</div>
+{{>footer}}

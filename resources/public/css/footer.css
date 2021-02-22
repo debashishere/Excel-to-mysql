@@ -1,0 +1,15 @@
+footer {
+    width: 100%;
+    padding: 20px;
+    background: rgb(194, 194, 194);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer p {
+    background-color: inherit;
+    color: black;
+    font-size: 0.80rem;
+    text-align: center;
+}
