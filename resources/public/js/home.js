@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const baseUrl = `http://localhost:3000`
+    const baseUrl = `https://exceltotable.herokuapp.com`
 
 
     const table = $('#table').DataTable({
@@ -25,8 +25,6 @@ $(document).ready(function () {
             if ($(this).find('tbody tr').length <= 1) {
                 $(this).parent().hide();
                 $('.no_data').addClass("active");
-            } else {
-
             }
             $('#table tfoot th').each(function (index) {
                 if (index == 1 || index == 2) {
@@ -77,6 +75,7 @@ $(document).ready(function () {
                 showAlert("file upload successfull");
                 $('.no_data').removeClass("active");
                 $('#table').parent().show()
+
                 table.ajax.reload();
 
             }
