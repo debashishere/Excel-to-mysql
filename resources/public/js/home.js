@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    const baseUrl = `https://exceltotable.herokuapp.com`
+    const baseUrl = `http://localhost:3000`
 
 
     const table = $('#table').DataTable({
@@ -93,6 +93,7 @@ $(document).ready(function () {
         $('#alert').html(`<p>${message}</p>`);
         setTimeout(function () {
             $('#alert').removeClass("active");
+            $('#alert').removeClass(`${code}`);
         }, 2000)
     }
 
